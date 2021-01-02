@@ -1,7 +1,6 @@
 package data
 import (
 	"database/sql"
-	"strconv"
 )
 // Category Model representing category entity
 type Category struct {
