@@ -11,7 +11,9 @@ func main() {
 
 	r := mux.NewRouter()
 	r.HandleFunc("/categories", getCategories).Methods("GET")
-
+	r.HandleFunc("/categories/{id}", getCategoryByID).Methods("GET")
+	r.HandleFunc("/categories", saveCategory).Methods("POST")
+	
 	err := http.ListenAndServe(
 		":4000",
 		r,
